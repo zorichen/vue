@@ -1,8 +1,10 @@
 <template>
     <div>
-        <input type="button" value="+1" @click="add()"> {{ count }}
-        <router-link to="/account">Account</router-link>
-        <router-link to="/goodslist">GoodsList</router-link>
+        <div class="container">
+            <router-link to="/hotel">如程订房</router-link>&nbsp&nbsp&nbsp
+            <router-link to="/goodslist">GoodsList</router-link>
+            <div class="row" style="height:20px"></div>
+        </div>
         <router-view></router-view>
     </div>
 </template>
@@ -13,12 +15,7 @@
             return {
                 count: 0
             }
-        },
-        methods: {
-            add() {
-                this.count++
-            }
-        } 
+        }
     }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <h3>这是GoodsList组件</h3>
     </div>
 </template>
