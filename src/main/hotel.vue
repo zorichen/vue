@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <select name="" id="" style="width:100px">
-                    <option value="">1.5m</option>
-                    <option value="">1.8m</option>
-                </select>&nbsp&nbsp&nbsp
-                <input type="button" value="筛选" @click="filter()">
+                <div class="form-inline">
+                    <span>酒店名称：</span>
+                    <input type="text" name="name" v-model="name">&nbsp&nbsp&nbsp
+                    <input type="button" value="搜索" @click="search()">
+                </div>
             </div>
             <div class="col-3">
                 <input type="button" value="上一个" @click="before()">
@@ -42,6 +42,7 @@
             return {
                 count: 0,
                 hotel: {},
+                filtered_hotels: [],
                 hotels: [
                     { hotel:'茶田吾舍秘境特色度假酒店', address: '杭州市西湖区青芝坞125号', img: 'https://image.ructrip.com/ructrip/1564653465165/20190613-DSC_8003-HDR.jpg?imageView2/1/w/670/h/400', size: '30m²', bed: '1.8m', name: '墨屋101', type: '大床房', url: 'https://mall.ructrip.com/calendar?storeNo=401000001965&houseTypeNo=601000002337' },
                     { hotel:'茶田吾舍秘境特色度假酒店', address: '杭州市西湖区青芝坞125号', img: 'https://image.ructrip.com/ructrip/1564653523277/20190613-DSC_8120.jpg?imageView2/1/w/670/h/400', size: '25m²', bed: '1.8m', name: '公屋102', type: '大床房', url: 'https://mall.ructrip.com/calendar?storeNo=401000001965&houseTypeNo=601000002338' },
@@ -133,6 +134,9 @@
             },
             after() {
                 this.count++
+            },
+            search(){
+                
             }
         } 
     }
